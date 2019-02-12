@@ -37,6 +37,7 @@ class MessagesController < ApplicationController
           @first_login = true
         else
           sms "You are not authorized to use this service."
+          render :nothing => true, :status => :unauthorized
         end
       end
     end
