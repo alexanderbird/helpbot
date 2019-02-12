@@ -1,16 +1,44 @@
 class MessagesController < ApplicationController 
   before_action :check_api_key
-  before_action :connect_to_twilio
+  before_action :initialize_message_service
+  before_action :sign_in_user
 
   def reply
-    message_body = params["Body"]
-    from_number = params["From"]
-    connect_to_twilio
-    @message_service.send_sms from_number, "Hello there, thanks for texting me. Your number is #{from_number}."
+    return unless @user
+    return if @first_login
+    from_number = params[:From]
+    body = params[:Body]
+    if body == 'logout'
+      @user.destroy! 
+      sms "👋 Successfully logged out."
+    else
+      sms Toolbox::Toolbox.new.handle body
+    end
   end
 
   private
-    def connect_to_twilio
+    def sms message
+      from_number = params[:From]
+      @message_service.send_sms from_number, message
+    end
+
+    def initialize_message_service
       @message_service = Services::MessageService.new
+    end
+
+    def sign_in_user
+      from_number = params[:From]
+      @user = User.find_by_phone from_number
+      if !@user
+        body = params[:Body]
+        if body == Rails.application.credentials.authentication[:sms]
+          @user = User.create! phone: from_number
+          sms "👋 Welcome!"
+          @first_login = true
+        else
+          sms "You are not authorized to use this service."
+          render :nothing => true, :status => :unauthorized
+        end
+      end
     end
 end
