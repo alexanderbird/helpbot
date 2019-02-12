@@ -28,7 +28,7 @@ module Services
 
     class MockTwilioClientMessages
       def create data
-        Rails.logger.debug "SMS from #{data[:from]} to #{data[:to]}: #{data[:body]}"
+        Rails.logger.info "SMS from #{data[:from]} to #{data[:to]}: #{data[:body]}"
       end
     end
 end
