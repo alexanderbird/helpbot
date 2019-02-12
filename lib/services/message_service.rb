@@ -1,12 +1,12 @@
 module Services
   class MessageService
     def initialize
-      if Rails.application.config.mock_twilio
-        @client = MockTwilioClient.new
-      else
+      if Rails.application.config.use_real_twilio
         account_sid = Rails.application.credentials.twilio[:sid]
         auth_token = Rails.application.credentials.twilio[:token]
         @client = Twilio::REST::Client.new account_sid, auth_token
+      else
+        @client = MockTwilioClient.new
       end
     end
 

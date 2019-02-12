@@ -53,5 +53,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.mock_twilio = true
+  config.use_real_twilio = false
 end
