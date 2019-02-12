@@ -7,7 +7,6 @@ class MessagesController < ApplicationController
     return unless @user
     return if @first_login
     from_number = params[:From]
-    body = params[:Body]
     if body == 'logout'
       @user.destroy! 
       sms "👋 Successfully logged out."
@@ -17,6 +16,10 @@ class MessagesController < ApplicationController
   end
 
   private
+    def body
+      params[:Body].downcase
+    end
+
     def sms message
       from_number = params[:From]
       @message_service.send_sms from_number, message
