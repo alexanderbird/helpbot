@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
       sms Toolbox::Toolbox.new.handle body
     end
   rescue StandardError => e
-    sms "🥴 Aw sugar! Something went wrong.\n\nI've logged the incident, and now I'm giving up." 
+    sms "🥴 Aw sugar! Something went wrong.\n\nI've logged the incident, and now I'm giving up ✌️" 
   end
 
   private
