@@ -1,0 +1,28 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=genesis%201:1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      api-key:
+      - "<BIBLE_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 0
+      message: 
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+    adapter_metadata:
+      effective_url: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=genesis%201:1
+  recorded_at: Sat, 16 Feb 2019 10:27:05 GMT
+recorded_with: VCR 4.0.0

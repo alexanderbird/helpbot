@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=genesis%201:2-6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      api-key:
+      - "<BIBLE_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      accept-ranges:
+      - bytes
+      cache-control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 16 Feb 2019 10:28:53 GMT
+      Server:
+      - nginx/1.12.1
+      vary:
+      - origin,accept-encoding
+      Content-Length:
+      - '2117'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjp7InBhc3NhZ2VzIjpbeyJpZCI6IkdFTi4xLjItR0VOLjEuNiIsIm9yZ0lkIjoiR0VOLjEuMi1HRU4uMS42IiwiYmlibGVJZCI6ImRlNGUxMmFmN2YyOGY1OTktMDEiLCJib29rSWQiOiJHRU4iLCJjaGFwdGVySWRzIjpbIkdFTi4xIl0sInJlZmVyZW5jZSI6IkdlbmVzaXMgMToyLTYiLCJjb250ZW50IjoiPHAgY2xhc3M9XCJwXCI+PHNwYW4gZGF0YS1udW1iZXI9XCIyXCIgY2xhc3M9XCJ2XCI+Mjwvc3Bhbj5BbmQgdGhlIGVhcnRoIHdhcyB3aXRob3V0IGZvcm0sIGFuZCB2b2lkOyBhbmQgZGFya25lc3MgPHNwYW4gY2xhc3M9XCJhZGRcIj53YXM8L3NwYW4+IHVwb24gdGhlIGZhY2Ugb2YgdGhlIGRlZXAuIEFuZCB0aGUgU3Bpcml0IG9mIEdvZCBtb3ZlZCB1cG9uIHRoZSBmYWNlIG9mIHRoZSB3YXRlcnMuPC9wPjxwIGNsYXNzPVwicFwiPjxzcGFuIGRhdGEtbnVtYmVyPVwiM1wiIGNsYXNzPVwidlwiPjM8L3NwYW4+QW5kIEdvZCBzYWlkLCBMZXQgdGhlcmUgYmUgbGlnaHQ6IGFuZCB0aGVyZSB3YXMgbGlnaHQuIDxzcGFuIGRhdGEtbnVtYmVyPVwiNFwiIGNsYXNzPVwidlwiPjQ8L3NwYW4+QW5kIEdvZCBzYXcgdGhlIGxpZ2h0LCB0aGF0IDxzcGFuIGNsYXNzPVwiYWRkXCI+aXQgd2FzPC9zcGFuPiBnb29kOiBhbmQgR29kIGRpdmlkZWQgdGhlIGxpZ2h0IGZyb20gdGhlIGRhcmtuZXNzLjxzcGFuIGRhdGEtbnVtYmVyPVwiNVwiIGNsYXNzPVwidlwiPjU8L3NwYW4+QW5kIEdvZCBjYWxsZWQgdGhlIGxpZ2h0IERheSwgYW5kIHRoZSBkYXJrbmVzcyBoZSBjYWxsZWQgTmlnaHQuIEFuZCB0aGUgZXZlbmluZyBhbmQgdGhlIG1vcm5pbmcgd2VyZSB0aGUgZmlyc3QgZGF5LjwvcD48cCBjbGFzcz1cInBcIj48c3BhbiBkYXRhLW51bWJlcj1cIjZcIiBjbGFzcz1cInZcIj42PC9zcGFuPsK2IEFuZCBHb2Qgc2FpZCwgTGV0IHRoZXJlIGJlIGEgZmlybWFtZW50IGluIHRoZSBtaWRzdCBvZiB0aGUgd2F0ZXJzLCBhbmQgbGV0IGl0IGRpdmlkZSB0aGUgd2F0ZXJzIGZyb20gdGhlIHdhdGVycy48L3A+IiwiY29weXJpZ2h0IjoiUFVCTElDIERPTUFJTiBleGNlcHQgaW4gdGhlIFVuaXRlZCBLaW5nZG9tLCB3aGVyZSBhIENyb3duIENvcHlyaWdodCBhcHBsaWVzIHRvIHByaW50aW5nIHRoZSBLSlYuIFNlZSBodHRwOi8vd3d3LmNhbWJyaWRnZS5vcmcvYWJvdXQtdXMvd2hvLXdlLWFyZS9xdWVlbnMtcHJpbnRlcnMtcGF0ZW50In1dfSwibWV0YSI6eyJmdW1zIjoiPHNjcmlwdD5cbnZhciBfQkFQST1fQkFQSXx8e307XG5pZih0eXBlb2YoX0JBUEkudCk9PT0ndW5kZWZpbmVkJyl7XG5kb2N1bWVudC53cml0ZSgnXFx4M0NzY3JpcHQgc3JjPVwiJytkb2N1bWVudC5sb2NhdGlvbi5wcm90b2NvbCsnLy9jZG4uc2NyaXB0dXJlLmFwaS5iaWJsZS9mdW1zL2Z1bXN2Mi5taW4uanNcIlxceDNFXFx4M0Mvc2NyaXB0XFx4M0UnKTt9XG5kb2N1bWVudC53cml0ZShcIlxceDNDc2NyaXB0XFx4M0VfQkFQSS50KCcnICsgdW5pcXVlICsgJycpO1xceDNDL3NjcmlwdFxceDNFXCIpO1xuPC9zY3JpcHQ+PG5vc2NyaXB0PjxpbWcgc3JjPVwiaHR0cHM6Ly9kM2Eyb2tjbG91ZXF5eC5jbG91ZGZyb250Lm5ldC9uZjE/dD0nICsgdW5pcXVlICsgJ1wiIGhlaWdodD1cIjFcIiB3aWR0aD1cIjFcIiBib3JkZXI9XCIwXCIgYWx0PVwiXCIgc3R5bGU9XCJoZWlnaHQ6IDA7IHdpZHRoOiAwO1wiIC8+PC9ub3NjcmlwdD4iLCJmdW1zSWQiOiIyOThhNWM4Ni05NDhjLTQwMDEtYmRmNi00M2RlOWJjYjMwZjQiLCJmdW1zSnNJbmNsdWRlIjoiY2RuLnNjcmlwdHVyZS5hcGkuYmlibGUvZnVtcy9mdW1zdjIubWluLmpzIiwiZnVtc0pzIjoidmFyIF9CQVBJPV9CQVBJfHx7fTtpZih0eXBlb2YoX0JBUEkudCkhPSd1bmRlZmluZWQnKXsgX0JBUEkudCgnMjk4YTVjODYtOTQ4Yy00MDAxLWJkZjYtNDNkZTliY2IzMGY0Jyk7IH0iLCJmdW1zTm9TY3JpcHQiOiI8aW1nIHNyYz1cImh0dHBzOi8vZDNidGd0enUzY3Rkd3guY2xvdWRmcm9udC5uZXQvbmYxP3Q9Mjk4YTVjODYtOTQ4Yy00MDAxLWJkZjYtNDNkZTliY2IzMGY0XCIgaGVpZ2h0PVwiMVwiIHdpZHRoPVwiMVwiIGJvcmRlcj1cIjBcIiBhbHQ9XCJcIiBzdHlsZT1cImhlaWdodDogMDsgd2lkdGg6IDA7XCIgLz4ifX0=
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=genesis%201:2-6
+  recorded_at: Sat, 16 Feb 2019 10:28:05 GMT
+recorded_with: VCR 4.0.0

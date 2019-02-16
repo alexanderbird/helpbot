@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/entries/en/offline
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      app_key:
+      - "<DICTIONARY_KEY_SECRET>"
+      app_id:
+      - "<DICTIONARY_ID_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 0
+      message: 
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+    adapter_metadata:
+      effective_url: https://od-api.oxforddictionaries.com:443/api/v1/entries/en/offline
+  recorded_at: Sat, 16 Feb 2019 10:26:53 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/offline
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      app_key:
+      - "<DICTIONARY_KEY_SECRET>"
+      app_id:
+      - "<DICTIONARY_ID_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 0
+      message: 
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+    adapter_metadata:
+      effective_url: https://od-api.oxforddictionaries.com:443/api/v1/inflections/en/offline
+  recorded_at: Sat, 16 Feb 2019 10:26:53 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/search/en?q=offline&prefix=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      app_key:
+      - "<DICTIONARY_KEY_SECRET>"
+      app_id:
+      - "<DICTIONARY_ID_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 0
+      message: 
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+    adapter_metadata:
+      effective_url: https://od-api.oxforddictionaries.com:443/api/v1/search/en?q=offline&prefix=false
+  recorded_at: Sat, 16 Feb 2019 10:26:53 GMT
+recorded_with: VCR 4.0.0

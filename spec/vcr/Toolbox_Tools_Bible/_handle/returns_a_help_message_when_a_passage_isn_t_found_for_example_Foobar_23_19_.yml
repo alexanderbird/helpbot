@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=foobar%2023:19
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      api-key:
+      - "<BIBLE_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      accept-ranges:
+      - bytes
+      cache-control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 16 Feb 2019 10:28:53 GMT
+      Server:
+      - nginx/1.12.1
+      vary:
+      - origin,accept-encoding
+      Content-Length:
+      - '983'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"query":"foobar 23:19","limit":10,"offset":0,"total":0,"verses":[]},"meta":{"fums":"<script>\nvar
+        _BAPI=_BAPI||{};\nif(typeof(_BAPI.t)===''undefined''){\ndocument.write(''\\x3Cscript
+        src=\"''+document.location.protocol+''//cdn.scripture.api.bible/fums/fumsv2.min.js\"\\x3E\\x3C/script\\x3E'');}\ndocument.write(\"\\x3Cscript\\x3E_BAPI.t(''''
+        + unique + '''');\\x3C/script\\x3E\");\n</script><noscript><img src=\"https://d3a2okcloueqyx.cloudfront.net/nf1?t=''
+        + unique + ''\" height=\"1\" width=\"1\" border=\"0\" alt=\"\" style=\"height:
+        0; width: 0;\" /></noscript>","fumsId":"a48f1f6a-59fc-4249-9656-e487734a7d10","fumsJsInclude":"cdn.scripture.api.bible/fums/fumsv2.min.js","fumsJs":"var
+        _BAPI=_BAPI||{};if(typeof(_BAPI.t)!=''undefined''){ _BAPI.t(''a48f1f6a-59fc-4249-9656-e487734a7d10'');
+        }","fumsNoScript":"<img src=\"https://d3btgtzu3ctdwx.cloudfront.net/nf1?t=a48f1f6a-59fc-4249-9656-e487734a7d10\"
+        height=\"1\" width=\"1\" border=\"0\" alt=\"\" style=\"height: 0; width: 0;\"
+        />"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=foobar%2023:19
+  recorded_at: Sat, 16 Feb 2019 10:28:05 GMT
+recorded_with: VCR 4.0.0

@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
 
   private
     def body
-      params[:Body].downcase
+      params[:Body].downcase.strip
     end
 
     def sms message

@@ -1,0 +1,138 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/entries/en/sdffdsdsfa
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      app_key:
+      - "<DICTIONARY_KEY_SECRET>"
+      app_id:
+      - "<DICTIONARY_ID_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Content-Type:
+      - text/html
+      Date:
+      - Sat, 16 Feb 2019 10:28:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '155'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+        <title>404 Not Found</title>
+        <h1>Not Found</h1>
+        <p>No entry available for 'sdffdsdsfa' in 'en'</p>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://od-api.oxforddictionaries.com:443/api/v1/entries/en/sdffdsdsfa
+  recorded_at: Sat, 16 Feb 2019 10:28:07 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/inflections/en/sdffdsdsfa
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      app_key:
+      - "<DICTIONARY_KEY_SECRET>"
+      app_id:
+      - "<DICTIONARY_ID_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Content-Type:
+      - text/html
+      Date:
+      - Sat, 16 Feb 2019 10:28:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '166'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+        <title>404 Not Found</title>
+        <h1>Not Found</h1>
+        <p>No lemmas found matching supplied source_lang and word</p>
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://od-api.oxforddictionaries.com:443/api/v1/inflections/en/sdffdsdsfa
+  recorded_at: Sat, 16 Feb 2019 10:28:08 GMT
+- request:
+    method: get
+    uri: https://od-api.oxforddictionaries.com/api/v1/search/en?q=sdffdsdsfa&prefix=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      app_key:
+      - "<DICTIONARY_KEY_SECRET>"
+      app_id:
+      - "<DICTIONARY_ID_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sat, 16 Feb 2019 10:28:55 GMT
+      Server:
+      - openresty/1.9.7.4
+      version:
+      - v1.10.0-19-g9c8abf9
+      Content-Length:
+      - '188'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "results": [],
+            "metadata": {
+                "offset": 0,
+                "sourceLanguage": "en",
+                "provider": "Oxford University Press",
+                "total": 0,
+                "limit": 5000
+            }
+        }
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://od-api.oxforddictionaries.com:443/api/v1/search/en?q=sdffdsdsfa&prefix=false
+  recorded_at: Sat, 16 Feb 2019 10:28:08 GMT
+recorded_with: VCR 4.0.0

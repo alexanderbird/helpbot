@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=galatians%202:19-3:3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      api-key:
+      - "<BIBLE_SECRET>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      accept-ranges:
+      - bytes
+      cache-control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 16 Feb 2019 10:28:53 GMT
+      Server:
+      - nginx/1.12.1
+      vary:
+      - origin,accept-encoding
+      Content-Length:
+      - '2359'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":{"passages":[{"id":"GAL.2.19-GAL.3.3","orgId":"GAL.2.19-GAL.3.3","bibleId":"de4e12af7f28f599-01","bookId":"GAL","chapterIds":["GAL.2","GAL.3"],"reference":"Galatians
+        2:19-3:3","content":"<p class=\"p\"><span data-number=\"19\" class=\"v\">19</span>For
+        I through the law am dead to the law, that I might live unto God. <span data-number=\"20\"
+        class=\"v\">20</span>I am crucified with Christ: nevertheless I live; yet
+        not I, but Christ liveth in me: and the life which I now live in the flesh
+        I live by the faith of the Son of God, who loved me, and gave himself for
+        me. <span data-number=\"21\" class=\"v\">21</span>I do not frustrate the grace
+        of God: for if righteousness <span class=\"add\">come</span> by the law, then
+        Christ is dead in vain.</p><p class=\"p\"><span data-number=\"1\" class=\"v\">1</span>O
+        foolish Galatians, who hath bewitched you, that ye should not obey the truth,
+        before whose eyes Jesus Christ hath been evidently set forth, crucified among
+        you? <span data-number=\"2\" class=\"v\">2</span>This only would I learn of
+        you, Received ye the Spirit by the works of the law, or by the hearing of
+        faith? <span data-number=\"3\" class=\"v\">3</span>Are ye so foolish? having
+        begun in the Spirit, are ye now made perfect by the flesh? </p>","copyright":"PUBLIC
+        DOMAIN except in the United Kingdom, where a Crown Copyright applies to printing
+        the KJV. See http://www.cambridge.org/about-us/who-we-are/queens-printers-patent"}]},"meta":{"fums":"<script>\nvar
+        _BAPI=_BAPI||{};\nif(typeof(_BAPI.t)===''undefined''){\ndocument.write(''\\x3Cscript
+        src=\"''+document.location.protocol+''//cdn.scripture.api.bible/fums/fumsv2.min.js\"\\x3E\\x3C/script\\x3E'');}\ndocument.write(\"\\x3Cscript\\x3E_BAPI.t(''''
+        + unique + '''');\\x3C/script\\x3E\");\n</script><noscript><img src=\"https://d3a2okcloueqyx.cloudfront.net/nf1?t=''
+        + unique + ''\" height=\"1\" width=\"1\" border=\"0\" alt=\"\" style=\"height:
+        0; width: 0;\" /></noscript>","fumsId":"066fffbe-7bbe-4129-afee-e95f90c752c7","fumsJsInclude":"cdn.scripture.api.bible/fums/fumsv2.min.js","fumsJs":"var
+        _BAPI=_BAPI||{};if(typeof(_BAPI.t)!=''undefined''){ _BAPI.t(''066fffbe-7bbe-4129-afee-e95f90c752c7'');
+        }","fumsNoScript":"<img src=\"https://d3btgtzu3ctdwx.cloudfront.net/nf1?t=066fffbe-7bbe-4129-afee-e95f90c752c7\"
+        height=\"1\" width=\"1\" border=\"0\" alt=\"\" style=\"height: 0; width: 0;\"
+        />"}}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-01/search?query=galatians%202:19-3:3
+  recorded_at: Sat, 16 Feb 2019 10:28:05 GMT
+recorded_with: VCR 4.0.0
