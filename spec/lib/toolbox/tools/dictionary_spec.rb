@@ -42,6 +42,16 @@ describe Toolbox::Tools::Dictionary do
       expect(result).to eq(REVERSING_INFLECTION)
     end
 
+    it "suggests a root word only once (removing duplicates) if the word is not found and is an inflection" do
+      result = Toolbox::Tools::Dictionary.new('define cats').handle
+      expect(result).to eq(CATS_INFLECTION)
+    end
+
+    it "doesn't blow up when there are empty entries in the results (e.g. defining 'cat')" do
+      result = Toolbox::Tools::Dictionary.new('define cat').handle
+      expect(result).to eq(CAT_DEFINITION)
+    end
+
     it "suggests an alternate spelling if the word is not found and is not an inflection" do
       result = Toolbox::Tools::Dictionary.new('define absolout').handle
       expect(result).to eq(ABSOLOUT_ALTERNATIVES)
@@ -60,6 +70,9 @@ describe Toolbox::Tools::Dictionary do
   end
 end
 
+CATS_INFLECTION = "Did you mean
+ - cat".freeze
+
 REVERSING_INFLECTION = "Did you mean
  - reverse".freeze
 
@@ -71,6 +84,21 @@ WORD_NOT_FOUND_MESSAGE = "🤦 Wow, that's not even close to a real word.".freez
 
 URANIUM_DEFINITION = "NOUN
 Element: the chemical element of atomic number 92, a dense grey radioactive metal used as a fuel in nuclear reactors.".freeze
+
+CAT_DEFINITION = "NOUN
+1. a) Mammal: a small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws. It is widely kept as a pet or for catching mice, and many breeds have been developed.
+
+1. b) Jazz: (especially among jazz enthusiasts) a man
+
+1. c) Games: a short tapered stick used in the game of tipcat.
+
+VERB
+1. Nautical: raise (an anchor) from the surface of the water to the cathead
+
+RESIDUAL
+1. a) Computing: computer-assisted (or -aided) testing.
+
+1. b) Aviation: clear air turbulence.".freeze
 
 SOUND_DEFINITION = "NOUN
 1. a) Physics: vibrations that travel through the air or another medium and can be heard when they reach a person's or animal's ear

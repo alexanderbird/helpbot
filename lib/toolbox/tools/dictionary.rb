@@ -31,8 +31,11 @@ module Toolbox
             @data << {
               category: lexicalEntry[:lexicalCategory].upcase,
               entries: lexicalEntry[:entries].map do |entry|
-                entry[:senses].map do |sense|
+                entry[:senses].filter do |sense|
+                  sense[:definitions]
+                end.map do |sense|
                   domains = sense[:domains]
+                  return nil unless sense[:definitions]
                   definition = sense[:definitions][0]
                   if domains
                     definition = "#{domains.join(", ")}: #{definition}"
@@ -49,7 +52,9 @@ module Toolbox
         def to_s
           @data.map do |group|
             outer_prefix = @data.length > 1 ? "1. " : ""
-            group_text = group[:entries].map do |entry|
+            group_text = group[:entries].filter do |entry|
+              entry.length > 0
+            end.map do |entry|
               entry_text = ""
               if entry.length > 1
                 inner_prefix = "a) "
@@ -79,7 +84,7 @@ module Toolbox
         def initialize lexicalEntries
           @inflections = lexicalEntries.map do |lexicalEntry|
             lexicalEntry[:inflectionOf][0][:text]
-          end
+          end.uniq
         end
 
         def to_s
